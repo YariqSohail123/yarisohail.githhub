@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<style>
+      .header{
+    height: 50vh;
+    width: 100%;
+    background-image: url(cars/b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+nav{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+}
+nav .fa-solid{
+    display: none;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: larger;
+    font-weight: 900;
+    color:blue;
+}
+nav img{
+    height: 100px;
+}
+.navbar ul li a{
+    text-decoration: none;
+}   
+.navbar ul li::after{
+    height: 2px;
+    background-color:blueviolet;
+    transition: 0.5s;
+    content: "";
+    display: block;
+    margin: auto;
+    width: 0%;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content h1{
+    color:khaki;
+    text-align: center;
+    margin: 180px;
+}
+@media (max-width:745px){
+     .navbar ul li{
+        display: block;
+     }
+    .navbar{
+        position: fixed;
+        background-color: blueviolet;
+        height: 100vh;
+        width: 200px;
+        top: 0px;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa-solid{
+         display: block;
+         color: khaki;
+         margin: 20px;
+         font-size:22px ;
+         cursor: pointer;
+    }
+    nav .fa-square-minus{
+        display: inline-block;
+        margin-top:2%;
+        margin-left: 3%;
+        color: khaki;
+    }
+    .navbar ul{
+        padding: 10px;
+    }
+    nav img{
+        margin-right: 20%;
+        width: 20%;
+    }
+    .content h1{
+        display: grid;
+        margin: 150px;
+    }
+    .header{
+        background-attachment: fixed;
+       width: 90%;
+    }
+}
+.office{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    margin-top: 30%;
+    /* font-size: 10px; */
+    }
+    .office-col{
+        flex-basis: 32%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+    .office-col img{
+        width: 90%;
+        display: block;
+        height: 350px;
+    }
+    .layer{
+        background: transparent;
+        height: 100%;
+        width: 90%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+    .layer:hover{
+        background: rgba(226,0,0,0.7);
+    }
+    .layer h3{
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 26px;
+        bottom:0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .layer:hover h3{
+        bottom: 50%;
+        opacity: 1;
+    }
+    @media(min-height:800px){
+        .office-col img{
+        width: 80%;
+        display: block;
+        height: 350px;
+    }
+}
+    /* from here cars start  */
+    .cars{
+        text-align: center;
+        padding-top: 50px;
+        width: 80%;
+        margin: auto;
+        /* font-size: 10px; */
+    }
+    .cars-col{
+        flex-basis: 31%;
+        background-color: aliceblue;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    .cars-col img{
+        width: auto;
+        border-radius: 10px;
+    }
+    .cars-col p{
+        padding: 0%;
+    }
+    .cars-col h3{
+        margin-top: 16px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    @media(min-height:800px){
+        .cars{
+        text-align: center;
+        padding-top: 50px;
+        width: 80%;
+        margin: auto;
+    }
+    .cars-col img{
+        width: 70%;
+        border-radius: 10px;
+    }
+}
+</style>
+<body>
+    <section class="header">
+        <nav>
+            <img src="cars/logo.jpg" alt="">
+            <div class="navbar" id="navlinks">
+                <i class="fa-solid fa-square-minus" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="Home1.html">Home</a></li>
+                    <li><a href="About us1.html">About Us</a></li>
+                    <li><a href="Contact Us1.html">Contact Us</a></li>
+                    <li><a href="Services1.html">Services</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" style="color: #51311f;" onclick="showmenu()"></i>
+        </nav>
+        <section class="office">
+            <h1>Our Head Quaters</h1>
+            <p>The engineer Honda Soichiro founded the Honda Technical Research Institute near Hamamatsu in 1946 to develop
+                small</p>
+            <div class="row">
+                <div class="office-col">
+                    <img src="cars/l.jpg" alt="">
+                    <div class="layer">
+                        <h3>London</h3>
+                    </div>
+                </div>
+                <div class="office-col">
+                    <img src="cars/w.jpg" alt="">
+                    <div class="layer">
+                        <h3>Washington</h3>
+                    </div>
+                </div>
+                <div class="office-col">
+                    <img src="cars/n.jpg" alt="">
+                    <div class="layer">
+                        <h3>New York</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- from here cars section start -->
+        <section class="cars">
+            <h1>Our Most famous cars</h1>
+            <p>Our Goal to maintain our Company Position at first</p>
+            <div class="row">
+                <div class="cars-col">
+                    <img src="cars/h.jpg" alt="">
+                    <h3>Honda City</h3>
+                    <p> The first-generation city was introduced in July 1970 as a two-door coupe model,[2] followed by a
+                        three-door hatchback that September. With a 1,100 cc transverse engine </p>
+                </div>
+                <div class="cars-col">
+                    <img src="cars/s.jpg" alt="">
+                    <h3>Honda Civic</h3>
+                    <p> The first-generation Civic was introduced in July 1972 as a two-door coupe model,[2] followed by a
+                        three-door hatchback that September. With a 1,169 cc transverse engine </p>
+                </div>
+                <div class="cars-col">
+                    <img src="cars/r.jpg" alt="">
+                    <h3>Honda Reborn</h3>
+                    <p> The first-generation Reborn was introduced in July 1974 as a two-door coupe model,[2] followed by a
+                        three-door hatchback that September. With a 1,200 cc transverse engine</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script>
+        var navlinks = document.getElementById("navlinks")
+        function showmenu() {
+            navlinks.style.right = "0"
+        }
+        function hidemenu() {
+            navlinks.style.right = "-200px"
+        }
+    </script>
+</body>
+</html>

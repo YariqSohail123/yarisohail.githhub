@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      .header{
+    height: 50vh;
+    width: 100%;
+    background-image: url(cars/b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+nav{
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+}
+nav .fa-solid{
+    display: none;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: larger;
+    font-weight: 900;
+    color:blue;
+}
+nav img{
+    height: 100px;
+}
+.navbar ul li a{
+    text-decoration: none;
+}   
+.navbar ul li::after{
+    height: 2px;
+    background-color:blueviolet;
+    transition: 0.5s;
+    content: "";
+    display: block;
+    margin: auto;
+    width: 0%;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content h1{
+    color:khaki;
+    text-align: center;
+    margin: 350px;
+}
+@media (max-width:745px){
+     .navbar ul li{
+        display: block;
+     }
+    .navbar{
+        position: fixed;
+        background-color: blueviolet;
+        height: 100vh;
+        width: 200px;
+        top: 0px;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa-solid{
+         display: block;
+         color: khaki;
+         margin: 20px;
+         font-size:22px ;
+         cursor: pointer;
+    }
+    nav .fa-square-minus{
+        display: inline-block;
+        margin-top:2%;
+        margin-left: 3%;
+        color: khaki;
+    }
+    .navbar ul{
+        padding: 10px;
+    }
+    nav img{
+        margin-right: 20%;
+        width: 20%;
+    }
+    .content h1{
+        display: grid;
+        margin: 150px;
+    }
+    .header{
+        background-attachment: fixed;
+       width: 90%;
+    }
+}
+/* from here course :start */
+.course{
+    margin:auto;
+    width: 80%;
+    padding-top: 400px;
+    text-align: center;
+}
+.course p{
+    /* text-align: center; */
+    font-size: larger;
+    font-style: oblique;
+}
+.row{
+    display: flex;
+    margin-top: 8%;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+}
+.course-col:hover{
+    box-shadow:0 0 20px 10px lightgray;
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+    </style>
+    
+<body>
+    <section class="header">
+        <nav>
+            <img src="cars/logo.jpg" alt="">
+            <div class="navbar" id="navlinks">
+                <i class="fa-solid fa-square-minus" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="Home1.html">Home</a></li>
+                    <li><a href="About us1.html">About Us</a></li>
+                    <li><a href="Contact Us1.html">Contact Us</a></li>
+                    <li><a href="Services1.html">Services</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" style="color: #51311f;" onclick="showmenu()"></i>
+        </nav>
+        <div class="section">
+            <div class="content-section">
+                <div class="content">
+                    <h1>
+                        Welcome to the world largest automobiles Workshop <br>
+                        The world most popular brand of automobile company
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="course">
+        <h1>Our Company</h1>
+        <p>
+            Since 1959 we have been the top-selling motorcycle company in the world.
+        </p>
+        <div class="row">
+            <div class="course-col">
+                <h3>Honda City</h3>
+                The nameplate was revived in 1996 for use on a series of subcompact four-door sedans aimed primarily
+                at developing markets, first mainly sold in Asia but later also in Latin America and Australia.
+                Since then, it has been a subcompact sedan built on Honda's Global Small Car platform
+            </div>
+            <div class="course-col">
+                <h3>Honda Civic</h3>
+                The Honda Civic is a series of automobiles
+                manufactured by Honda since 1972. Since 2000, the Civic has been categorized as a compact car, while
+                previously it occupied the subcompact class.
+            </div>
+            <div class="course-col">
+                <h3>Honda Reborn</h3>
+                Owning a Honda car is a great pleasure for Honda consumers because of the quality, value, comfort,
+                and great durability, which are the reasons people love Honda cars and dream to own one of the Honda
+                cars in life. Honda is a very popular Japanese car brand and offers its excellent class vehicles in
+                the global market.
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
